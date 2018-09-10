@@ -1,0 +1,11 @@
+# The HTTP endpoint for you Prisma API
+#endpoint: ''
+endpoint: https://us1.prisma.sh/seonghwan-jo/database/dev
+
+#Points to the file that holds you data model
+datamodel: datamodel.graphql
+
+#Deploy hook
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
